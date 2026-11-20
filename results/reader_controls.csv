@@ -1,0 +1,15 @@
+task,control,simulator_grader,reader_expected,reader_observed,behaves_as_expected,reader_failed_checks,why
+la01_serial_dilution,reference,pass,pass,pass,yes,,
+la01_serial_dilution,multi_dispense_buffer,pass,pass,pass,yes,,
+la01_serial_dilution,fresh_tips_every_transfer,pass,pass,pass,yes,,
+la01_serial_dilution,stock_first_then_buffer,pass,pass,pass,yes,,
+la01_serial_dilution,bigger_mix,pass,pass,pass,yes,,
+la01_serial_dilution,no_mixing,fail,fail,fail,yes,reader_input controls_clean tops_equal top_matches_standard dilution_series,"column 1 holds 1.5 x the top concentration and saturates the reader, so the plate is refused; the series also collapses after column 1"
+la01_serial_dilution,no_final_discard,fail,pass,pass,yes,,"BLIND SPOT: the extra 50 uL sits in column 11, below the reader's detection limit"
+la01_serial_dilution,series_stops_at_column_5,fail,fail,fail,yes,dilution_series,columns 6 and 7 read as blank where the series should still be visible
+la01_serial_dilution,top_diluted_1_in_15,fail,fail,fail,yes,top_matches_standard dilution_series,the top wells read 0.67 x the hand-made standard
+la01_serial_dilution,two_fold_series,fail,fail,fail,yes,dilution_series,"the series falls 2-fold per column, not 3-fold"
+la01_serial_dilution,buffer_with_used_tips,fail,fail,fail,yes,controls_clean dilution_series,carryover lights up the control column
+la01_serial_dilution,series_into_control,fail,pass,pass,yes,,"BLIND SPOT: the control column gets 1/177,147 of the top concentration, below the detection limit"
+la01_serial_dilution,one_tip_all_rows,fail,fail,fail,yes,dilution_series,carryover from earlier rows puts a floor under the low end of each later series
+la01_serial_dilution,overfilled_tip,fail,fail,fail,yes,run_completes,"NO PLATE: the run stops, so there is nothing to read"

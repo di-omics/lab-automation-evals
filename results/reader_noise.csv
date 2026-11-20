@@ -1,0 +1,5 @@
+reader_cv,draws,reference_passed,reference_plate_refused,reference_wrong_verdict,mistakes_caught_in_every_draw,mistakes,draws_per_mistake
+0.02,200,200,0,0,6,6,50
+0.03,200,200,0,0,6,6,50
+0.04,200,197,0,3,6,6,50
+0.05,200,176,9,15,6,6,50

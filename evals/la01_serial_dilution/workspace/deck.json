@@ -1,0 +1,55 @@
+{
+ "labware": {
+  "tips": {
+   "type": "tiprack96",
+   "tips": "full rack, 96 tips of 300 uL"
+  },
+  "source": {
+   "type": "plate96",
+   "contents_ul": {
+    "A1": {
+     "cmpd_1": 60.0
+    },
+    "B1": {
+     "cmpd_2": 60.0
+    },
+    "C1": {
+     "cmpd_3": 60.0
+    },
+    "D1": {
+     "cmpd_4": 60.0
+    },
+    "E1": {
+     "cmpd_5": 60.0
+    },
+    "F1": {
+     "cmpd_6": 60.0
+    },
+    "G1": {
+     "cmpd_7": 60.0
+    },
+    "H1": {
+     "cmpd_8": 60.0
+    }
+   },
+   "note": "1000 uM stocks, compound 1 in A1 ... compound 8 in H1"
+  },
+  "buffer": {
+   "type": "reservoir",
+   "contents_ul": {
+    "A1": {
+     "buffer": 30000.0
+    }
+   },
+   "note": "assay buffer"
+  },
+  "assay": {
+   "type": "plate96",
+   "note": "empty destination plate"
+  },
+  "waste": {
+   "type": "reservoir",
+   "note": "empty reservoir for discarded liquid"
+  }
+ }
+}

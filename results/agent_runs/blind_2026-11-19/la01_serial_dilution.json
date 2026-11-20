@@ -1,0 +1,359 @@
+{
+ "task": "la01_serial_dilution",
+ "model": "Claude Opus 5.5",
+ "harness": "Claude Code workflow subagent with a shell and Python (standard library); no simulator provided",
+ "date": "2026-11-19",
+ "runs": 1,
+ "blinding": "Told to read and write only inside its task folder and not to use the internet; this was not enforced. The agent could see the task prompt and workspace files only, plus the operator's memory index, which holds no task answers.",
+ "task_files_sha256": {
+  "TASK.md": "b2d077ffbd7fe485afa419c880464297fb78affbf543fbba3bca22183edd402a",
+  "deck.json": "108d0a18bb0dafbeacb8175175f270e8a7f692331badb800bfec0330bc9a8778",
+  "environment.md": "9cacaf9a38e76b36955a874dc9b211bc18c18c0aa18899811905c7660b6197d4"
+ },
+ "answer": {
+  "plan": [
+   {
+    "op": "pick_up_tips",
+    "rack": "tips",
+    "column": 1
+   },
+   {
+    "op": "aspirate",
+    "labware": "buffer",
+    "volume_ul": 135
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 1,
+    "volume_ul": 135
+   },
+   {
+    "op": "aspirate",
+    "labware": "buffer",
+    "volume_ul": 300
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 2,
+    "volume_ul": 100
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 3,
+    "volume_ul": 100
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 4,
+    "volume_ul": 100
+   },
+   {
+    "op": "aspirate",
+    "labware": "buffer",
+    "volume_ul": 300
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 5,
+    "volume_ul": 100
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 6,
+    "volume_ul": 100
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 7,
+    "volume_ul": 100
+   },
+   {
+    "op": "aspirate",
+    "labware": "buffer",
+    "volume_ul": 300
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 8,
+    "volume_ul": 100
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 9,
+    "volume_ul": 100
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 10,
+    "volume_ul": 100
+   },
+   {
+    "op": "aspirate",
+    "labware": "buffer",
+    "volume_ul": 200
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 11,
+    "volume_ul": 100
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 12,
+    "volume_ul": 100
+   },
+   {
+    "op": "mix",
+    "labware": "assay",
+    "column": 12,
+    "volume_ul": 75,
+    "cycles": 5
+   },
+   {
+    "op": "drop_tips"
+   },
+   {
+    "op": "pick_up_tips",
+    "rack": "tips",
+    "column": 2
+   },
+   {
+    "op": "aspirate",
+    "labware": "source",
+    "column": 1,
+    "volume_ul": 15
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 1,
+    "volume_ul": 15
+   },
+   {
+    "op": "mix",
+    "labware": "assay",
+    "column": 1,
+    "volume_ul": 100,
+    "cycles": 5
+   },
+   {
+    "op": "aspirate",
+    "labware": "assay",
+    "column": 1,
+    "volume_ul": 50
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 2,
+    "volume_ul": 50
+   },
+   {
+    "op": "mix",
+    "labware": "assay",
+    "column": 2,
+    "volume_ul": 100,
+    "cycles": 5
+   },
+   {
+    "op": "aspirate",
+    "labware": "assay",
+    "column": 2,
+    "volume_ul": 50
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 3,
+    "volume_ul": 50
+   },
+   {
+    "op": "mix",
+    "labware": "assay",
+    "column": 3,
+    "volume_ul": 100,
+    "cycles": 5
+   },
+   {
+    "op": "aspirate",
+    "labware": "assay",
+    "column": 3,
+    "volume_ul": 50
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 4,
+    "volume_ul": 50
+   },
+   {
+    "op": "mix",
+    "labware": "assay",
+    "column": 4,
+    "volume_ul": 100,
+    "cycles": 5
+   },
+   {
+    "op": "aspirate",
+    "labware": "assay",
+    "column": 4,
+    "volume_ul": 50
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 5,
+    "volume_ul": 50
+   },
+   {
+    "op": "mix",
+    "labware": "assay",
+    "column": 5,
+    "volume_ul": 100,
+    "cycles": 5
+   },
+   {
+    "op": "aspirate",
+    "labware": "assay",
+    "column": 5,
+    "volume_ul": 50
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 6,
+    "volume_ul": 50
+   },
+   {
+    "op": "mix",
+    "labware": "assay",
+    "column": 6,
+    "volume_ul": 100,
+    "cycles": 5
+   },
+   {
+    "op": "aspirate",
+    "labware": "assay",
+    "column": 6,
+    "volume_ul": 50
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 7,
+    "volume_ul": 50
+   },
+   {
+    "op": "mix",
+    "labware": "assay",
+    "column": 7,
+    "volume_ul": 100,
+    "cycles": 5
+   },
+   {
+    "op": "aspirate",
+    "labware": "assay",
+    "column": 7,
+    "volume_ul": 50
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 8,
+    "volume_ul": 50
+   },
+   {
+    "op": "mix",
+    "labware": "assay",
+    "column": 8,
+    "volume_ul": 100,
+    "cycles": 5
+   },
+   {
+    "op": "aspirate",
+    "labware": "assay",
+    "column": 8,
+    "volume_ul": 50
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 9,
+    "volume_ul": 50
+   },
+   {
+    "op": "mix",
+    "labware": "assay",
+    "column": 9,
+    "volume_ul": 100,
+    "cycles": 5
+   },
+   {
+    "op": "aspirate",
+    "labware": "assay",
+    "column": 9,
+    "volume_ul": 50
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 10,
+    "volume_ul": 50
+   },
+   {
+    "op": "mix",
+    "labware": "assay",
+    "column": 10,
+    "volume_ul": 100,
+    "cycles": 5
+   },
+   {
+    "op": "aspirate",
+    "labware": "assay",
+    "column": 10,
+    "volume_ul": 50
+   },
+   {
+    "op": "dispense",
+    "labware": "assay",
+    "column": 11,
+    "volume_ul": 50
+   },
+   {
+    "op": "mix",
+    "labware": "assay",
+    "column": 11,
+    "volume_ul": 100,
+    "cycles": 5
+   },
+   {
+    "op": "aspirate",
+    "labware": "assay",
+    "column": 11,
+    "volume_ul": 50
+   },
+   {
+    "op": "dispense",
+    "labware": "waste",
+    "volume_ul": 50
+   },
+   {
+    "op": "drop_tips"
+   }
+  ]
+ },
+ "approach": "The plan has 57 steps and uses 16 tips. First, clean tips put buffer only into empty wells, which avoids contact: 135 uL in column 1 and 100 uL in columns 2-12. The same buffer-only tips then mix column 12 and are dropped. Next, fresh tips move 15 uL of each 1000 uM stock into column 1, giving 150 uL at 100 uM, then mix 100 uL x5. Each row then gets 50 uL into 100 uL of buffer (3-fold), mixed after every transfer. The extra 50 uL from column 11 goes to waste. Each channel stays in its own row, and no tip that touched a compound goes back to the buffer or the stocks. My own checker passed the plan under 4 readings of the rules and rejected all 9 deliberately broken plans.",
+ "doubts": "1. The rules never say a never-mixed, single-layer well (column 12 buffer) counts as homogeneous, so I mixed it with buffer-only tips to be safe. 2. Unclear whether a contact-free dispense passes on the tip's own traces; the plan is safe either way. 3. Unclear whether 8 channels dispensing into one empty reservoir is contact-free for all of them. 4. Waste dispense versus dropping tips that still hold liquid: both are allowed. 5. Contamination checks on source, buffer and waste are not specified. 6. 100/3^n never comes out exact, so the tolerance is not stated."
+}

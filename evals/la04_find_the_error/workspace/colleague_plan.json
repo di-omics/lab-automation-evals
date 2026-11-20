@@ -1,0 +1,226 @@
+[
+ {
+  "op": "pick_up_tips",
+  "rack": "tips",
+  "column": 1
+ },
+ {
+  "op": "aspirate",
+  "labware": "reagent",
+  "volume_ul": 40.0
+ },
+ {
+  "op": "dispense",
+  "labware": "assay",
+  "column": 1,
+  "volume_ul": 40.0
+ },
+ {
+  "op": "mix",
+  "labware": "assay",
+  "column": 1,
+  "volume_ul": 50.0,
+  "cycles": 3
+ },
+ {
+  "op": "aspirate",
+  "labware": "reagent",
+  "volume_ul": 40.0
+ },
+ {
+  "op": "dispense",
+  "labware": "assay",
+  "column": 2,
+  "volume_ul": 40.0
+ },
+ {
+  "op": "mix",
+  "labware": "assay",
+  "column": 2,
+  "volume_ul": 50.0,
+  "cycles": 3
+ },
+ {
+  "op": "aspirate",
+  "labware": "reagent",
+  "volume_ul": 40.0
+ },
+ {
+  "op": "dispense",
+  "labware": "assay",
+  "column": 3,
+  "volume_ul": 40.0
+ },
+ {
+  "op": "mix",
+  "labware": "assay",
+  "column": 3,
+  "volume_ul": 50.0,
+  "cycles": 3
+ },
+ {
+  "op": "aspirate",
+  "labware": "reagent",
+  "volume_ul": 40.0
+ },
+ {
+  "op": "dispense",
+  "labware": "assay",
+  "column": 4,
+  "volume_ul": 40.0
+ },
+ {
+  "op": "mix",
+  "labware": "assay",
+  "column": 4,
+  "volume_ul": 50.0,
+  "cycles": 3
+ },
+ {
+  "op": "aspirate",
+  "labware": "reagent",
+  "volume_ul": 40.0
+ },
+ {
+  "op": "dispense",
+  "labware": "assay",
+  "column": 5,
+  "volume_ul": 40.0
+ },
+ {
+  "op": "mix",
+  "labware": "assay",
+  "column": 5,
+  "volume_ul": 50.0,
+  "cycles": 3
+ },
+ {
+  "op": "aspirate",
+  "labware": "reagent",
+  "volume_ul": 40.0
+ },
+ {
+  "op": "dispense",
+  "labware": "assay",
+  "column": 6,
+  "volume_ul": 40.0
+ },
+ {
+  "op": "mix",
+  "labware": "assay",
+  "column": 6,
+  "volume_ul": 50.0,
+  "cycles": 3
+ },
+ {
+  "op": "aspirate",
+  "labware": "reagent",
+  "volume_ul": 40.0
+ },
+ {
+  "op": "dispense",
+  "labware": "assay",
+  "column": 7,
+  "volume_ul": 40.0
+ },
+ {
+  "op": "mix",
+  "labware": "assay",
+  "column": 7,
+  "volume_ul": 50.0,
+  "cycles": 3
+ },
+ {
+  "op": "aspirate",
+  "labware": "reagent",
+  "volume_ul": 40.0
+ },
+ {
+  "op": "dispense",
+  "labware": "assay",
+  "column": 8,
+  "volume_ul": 40.0
+ },
+ {
+  "op": "mix",
+  "labware": "assay",
+  "column": 8,
+  "volume_ul": 50.0,
+  "cycles": 3
+ },
+ {
+  "op": "aspirate",
+  "labware": "reagent",
+  "volume_ul": 40.0
+ },
+ {
+  "op": "dispense",
+  "labware": "assay",
+  "column": 9,
+  "volume_ul": 40.0
+ },
+ {
+  "op": "mix",
+  "labware": "assay",
+  "column": 9,
+  "volume_ul": 50.0,
+  "cycles": 3
+ },
+ {
+  "op": "aspirate",
+  "labware": "reagent",
+  "volume_ul": 40.0
+ },
+ {
+  "op": "dispense",
+  "labware": "assay",
+  "column": 10,
+  "volume_ul": 40.0
+ },
+ {
+  "op": "mix",
+  "labware": "assay",
+  "column": 10,
+  "volume_ul": 50.0,
+  "cycles": 3
+ },
+ {
+  "op": "aspirate",
+  "labware": "reagent",
+  "volume_ul": 40.0
+ },
+ {
+  "op": "dispense",
+  "labware": "assay",
+  "column": 11,
+  "volume_ul": 40.0
+ },
+ {
+  "op": "mix",
+  "labware": "assay",
+  "column": 11,
+  "volume_ul": 50.0,
+  "cycles": 3
+ },
+ {
+  "op": "aspirate",
+  "labware": "reagent",
+  "volume_ul": 40.0
+ },
+ {
+  "op": "dispense",
+  "labware": "assay",
+  "column": 12,
+  "volume_ul": 40.0
+ },
+ {
+  "op": "mix",
+  "labware": "assay",
+  "column": 12,
+  "volume_ul": 50.0,
+  "cycles": 3
+ },
+ {
+  "op": "drop_tips"
+ }
+]

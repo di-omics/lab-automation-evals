@@ -1,0 +1,7 @@
+batch,task,model,harness,date,passed,score,failed_checks,tips_used,file
+blind_2026-11-19,la01_serial_dilution,Claude Opus 5.5,Claude Code workflow subagent with a shell and Python (standard library); no simulator provided,2026-11-19,pass,1.0000,,16,results/agent_runs/blind_2026-11-19/la01_serial_dilution.json
+blind_2026-11-19,la02_normalize_plate,Claude Opus 5.5,Claude Code workflow subagent with a shell and Python (standard library); no simulator provided,2026-11-19,pass,1.0000,,33,results/agent_runs/blind_2026-11-19/la02_normalize_plate.json
+blind_2026-11-19,la03_cherry_pick,Claude Opus 5.5,Claude Code workflow subagent with a shell and Python (standard library); no simulator provided,2026-11-19,pass,1.0000,,14,results/agent_runs/blind_2026-11-19/la03_cherry_pick.json
+blind_2026-11-19,la04_find_the_error,Claude Opus 5.5,Claude Code workflow subagent with a shell and Python (standard library); no simulator provided,2026-11-19,pass,1.0000,,96,results/agent_runs/blind_2026-11-19/la04_find_the_error.json
+blind_2026-11-19,la05_dye_qc,Claude Opus 5.5,Claude Code workflow subagent with a shell and Python (standard library); no simulator provided,2026-11-19,pass,1.0000,,,results/agent_runs/blind_2026-11-19/la05_dye_qc.json
+blind_2026-11-19,la06_run_log_triage,Claude Opus 5.5,Claude Code workflow subagent with a shell and Python (standard library); no simulator provided,2026-11-19,pass,1.0000,,,results/agent_runs/blind_2026-11-19/la06_run_log_triage.json

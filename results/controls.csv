@@ -1,0 +1,62 @@
+task,control,expected,observed,behaves_as_expected,failed_checks,score,tips_used,what_it_does
+la01_serial_dilution,reference,pass,pass,yes,,1.0000,16,"buffer first, 15 uL stock into 135 uL, 50 uL transfers with a mix each time, 50 uL discarded from column 11"
+la01_serial_dilution,multi_dispense_buffer,pass,pass,yes,,1.0000,16,buffer laid down 3 wells per aspirate into empty wells
+la01_serial_dilution,fresh_tips_every_transfer,pass,pass,yes,,1.0000,96,a new tip column for each transfer (uses all 96 tips)
+la01_serial_dilution,stock_first_then_buffer,pass,pass,yes,,1.0000,24,"stock into the empty top well, then buffer with a separate clean tip set"
+la01_serial_dilution,bigger_mix,pass,pass,yes,,1.0000,16,"larger, longer mixes"
+la01_serial_dilution,no_mixing,fail,fail,yes,concentrations mixed,0.6000,16,"never mixes, so each transfer draws the bottom layer"
+la01_serial_dilution,no_final_discard,fail,fail,yes,volumes,0.8000,16,forgets to remove 50 uL from column 11
+la01_serial_dilution,series_stops_at_column_5,fail,fail,yes,concentrations,0.8000,16,stops the series at column 5 and leaves columns 6 to 11 as buffer
+la01_serial_dilution,top_diluted_1_in_15,fail,fail,yes,concentrations,0.8000,16,"makes the top well 1:15 instead of 1:10, so every well is a third low"
+la01_serial_dilution,two_fold_series,fail,fail,yes,concentrations,0.8000,16,a 2-fold series instead of 3-fold
+la01_serial_dilution,buffer_with_used_tips,fail,fail,yes,no_contamination,0.8000,16,goes back into the buffer with tips that touched compound
+la01_serial_dilution,series_into_control,fail,fail,yes,no_contamination,0.8000,16,runs the series into the control column
+la01_serial_dilution,one_tip_all_rows,fail,fail,yes,no_contamination,0.8000,2,one tip carries compound between rows
+la01_serial_dilution,overfilled_tip,fail,fail,yes,run_completes volumes concentrations no_contamination mixed,0.0000,8,asks a 300 uL tip for 1235 uL
+la02_normalize_plate,reference,pass,pass,yes,,1.0000,29,"TE first into empty wells, one clean tip per sample, 1:10 predilution for samples above 500 ng/uL"
+la02_normalize_plate,te_after_sample,pass,pass,yes,,1.0000,50,"sample first, then TE with a fresh tip per well and a mix"
+la02_normalize_plate,predilute_1_in_20,pass,pass,yes,,1.0000,29,a 1:20 predilution instead of 1:10
+la02_normalize_plate,single_channel,pass,pass,yes,,1.0000,29,"one channel, one sample at a time"
+la02_normalize_plate,direct_tiny_volumes,fail,fail,yes,run_completes volumes concentrations no_contamination mixed failed_wells_empty,0.1429,15,pipettes concentrated samples neat at under 1 uL
+la02_normalize_plate,ignores_dead_volume_crash,fail,fail,yes,run_completes volumes concentrations no_contamination mixed failed_wells_empty failed_samples,0.0000,29,plans 35.7 uL from a 30 uL well with a 5 uL dead volume
+la02_normalize_plate,low_samples_filled_anyway,fail,fail,yes,failed_wells_empty failed_samples,0.7143,30,"ignores the dead volume, so it fills B3 (17 ng/uL) with all the sample it can reach and does not report it"
+la02_normalize_plate,one_tip_for_all_samples,fail,fail,yes,no_contamination,0.8571,9,one tip carries DNA from sample to sample
+la02_normalize_plate,no_mix_after_sample,fail,fail,yes,mixed,0.8571,29,adds the sample to TE and never mixes
+la02_normalize_plate,te_tips_reused_after_contact,fail,fail,yes,no_contamination,0.8571,37,"adds TE after the samples with the same tips, back and forth to the reservoir"
+la02_normalize_plate,rounds_to_whole_microliters,fail,fail,yes,concentrations,0.8571,29,rounds every sample volume to a whole microliter (1.22 uL becomes 1 uL)
+la02_normalize_plate,adds_2_ul_overage,fail,fail,yes,volumes mixed,0.7143,29,"right concentration, but 52 uL per well to allow for pipetting loss"
+la02_normalize_plate,forgot_failed_list,fail,fail,yes,failed_samples,0.8571,29,"correct plate, empty failed list"
+la03_cherry_pick,reference,pass,pass,yes,,1.0000,14,"one clean tip per hit, channel 1 reaching each row"
+la03_cherry_pick,batched_channels,pass,pass,yes,,1.0000,14,several channels at once wherever rows rise in both plates
+la03_cherry_pick,other_valid_order,pass,pass,yes,,1.0000,14,"P2 hits first, channel 8 only; still packed from A1"
+la03_cherry_pick,picks_positive_controls,fail,fail,yes,hit_selection,0.7500,30,"thresholds every well, so the reference inhibitor column comes along"
+la03_cherry_pick,averages_replicates,fail,fail,yes,hit_selection,0.7500,18,calls a hit on the mean of the replicates
+la03_cherry_pick,one_tip_for_all,fail,fail,yes,plate_matches_map no_contamination,0.5000,1,one tip carries compound into the next source well
+la03_cherry_pick,map_disagrees_with_plate,fail,fail,yes,plate_matches_map,0.7500,14,the report swaps 2 destination wells
+la03_cherry_pick,not_packed_from_a1,fail,fail,yes,plate_matches_map,0.7500,14,starts at B1
+la03_cherry_pick,channels_cross,fail,fail,yes,run_completes plate_matches_map no_contamination,0.2500,2,asks channel 1 for row D and channel 2 for row B in one step
+la04_find_the_error,reference,pass,pass,yes,,1.0000,96,"step 5, a used tip back into the reagent; fix: a fresh tip column per plate column"
+la04_find_the_error,bigger_mix,pass,pass,yes,,1.0000,96,"same fix with a larger, longer mix"
+la04_find_the_error,class_in_other_case,pass,pass,yes,,1.0000,96,class written in capitals
+la04_find_the_error,step_of_first_sample_harm,fail,fail,yes,first_error_step,0.8571,96,"names step 6, where the first sample is harmed, not the step that fouls the reagent"
+la04_find_the_error,names_the_sample_harm,fail,fail,yes,first_error_step error_class,0.7143,96,"names step 6 and the cross-sample carryover, a later consequence of the step 5 fault"
+la04_find_the_error,fix_adds_30_ul,fail,fail,yes,volumes reagent_fraction,0.7143,96,"fresh tips, but 30 uL of reagent instead of 40"
+la04_find_the_error,names_the_mix,fail,fail,yes,error_class,0.8571,96,"blames the 50 uL mix, which is exactly half the well and enough"
+la04_find_the_error,fix_still_shares_tips,fail,fail,yes,no_contamination,0.8571,48,fresh tips every second column only
+la04_find_the_error,fix_drops_the_mix,fail,fail,yes,mixed,0.8571,96,fresh tips but no mix
+la04_find_the_error,fix_runs_out_of_tips,fail,fail,yes,run_completes volumes reagent_fraction no_contamination mixed,0.2857,96,separate tips for adding and for mixing need 192 tips
+la04_find_the_error,unchanged_plan,fail,fail,yes,no_contamination,0.8571,8,"right diagnosis, plan not fixed"
+la05_dye_qc,reference,pass,pass,yes,,1.0000,,"line with intercept, per channel (row), sample SD"
+la05_dye_qc,single_point_at_50,pass,pass,yes,,1.0000,,"calibrates on the blank and the 50 uL standard alone, which sits at the target"
+la05_dye_qc,population_sd,pass,pass,yes,,1.0000,,CV with the population SD
+la05_dye_qc,line_through_origin,fail,fail,yes,failing_channels worst_channel_mean_ul,0.3333,,"forces the fit through zero, ignoring the blank; still says no_go, but fails channel 1 instead of 6"
+la05_dye_qc,columns_as_channels,fail,fail,yes,failing_channels worst_channel_mean_ul,0.3333,,"groups by column, not by channel; still says no_go, for the wrong reason"
+la05_dye_qc,whole_plate_only,fail,fail,yes,failing_channels worst_channel_mean_ul,0.3333,,"judges the plate as a whole; still says no_go, for the wrong reason"
+la05_dye_qc,plate_mean_accuracy_only,fail,fail,yes,decision failing_channels worst_channel_mean_ul,0.0000,,"checks only that the whole-plate mean is within 5%, so it releases the head"
+la05_dye_qc,raw_absorbance_ratio,fail,fail,yes,worst_channel_mean_ul,0.6667,,divides absorbance by the slope without removing the blank
+la06_run_log_triage,reference,pass,pass,yes,,1.0000,,the 3 errors that changed what a well received
+la06_run_log_triage,lower_case_padded,pass,pass,yes,,1.0000,,"same wells, other spelling"
+la06_run_log_triage,every_flagged_channel,fail,fail,yes,wells_to_repeat,0.0000,,"repeats a well for every warning, including recovered ones"
+la06_run_log_triage,errors_only_misses_partial,fail,fail,yes,wells_to_repeat,0.0000,,misses the short aspiration that the robot continued past
+la06_run_log_triage,channel_as_column,fail,fail,yes,wells_to_repeat,0.0000,,swaps channel and column
+la06_run_log_triage,whole_columns,fail,fail,yes,wells_to_repeat,0.0000,,repeats every well in each affected column

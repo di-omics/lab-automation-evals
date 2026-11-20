@@ -1,0 +1,311 @@
+{
+ "labware": {
+  "tips": {
+   "type": "tiprack96",
+   "tips": "full rack, 96 tips of 300 uL"
+  },
+  "reagent": {
+   "type": "reservoir",
+   "contents_ul": {
+    "A1": {
+     "reagent": 20000.0
+    }
+   },
+   "note": "detection reagent"
+  },
+  "assay": {
+   "type": "plate96",
+   "contents_ul": {
+    "A1": {
+     "sample_A1": 60.0
+    },
+    "B1": {
+     "sample_B1": 60.0
+    },
+    "C1": {
+     "sample_C1": 60.0
+    },
+    "D1": {
+     "sample_D1": 60.0
+    },
+    "E1": {
+     "sample_E1": 60.0
+    },
+    "F1": {
+     "sample_F1": 60.0
+    },
+    "G1": {
+     "sample_G1": 60.0
+    },
+    "H1": {
+     "sample_H1": 60.0
+    },
+    "A2": {
+     "sample_A2": 60.0
+    },
+    "B2": {
+     "sample_B2": 60.0
+    },
+    "C2": {
+     "sample_C2": 60.0
+    },
+    "D2": {
+     "sample_D2": 60.0
+    },
+    "E2": {
+     "sample_E2": 60.0
+    },
+    "F2": {
+     "sample_F2": 60.0
+    },
+    "G2": {
+     "sample_G2": 60.0
+    },
+    "H2": {
+     "sample_H2": 60.0
+    },
+    "A3": {
+     "sample_A3": 60.0
+    },
+    "B3": {
+     "sample_B3": 60.0
+    },
+    "C3": {
+     "sample_C3": 60.0
+    },
+    "D3": {
+     "sample_D3": 60.0
+    },
+    "E3": {
+     "sample_E3": 60.0
+    },
+    "F3": {
+     "sample_F3": 60.0
+    },
+    "G3": {
+     "sample_G3": 60.0
+    },
+    "H3": {
+     "sample_H3": 60.0
+    },
+    "A4": {
+     "sample_A4": 60.0
+    },
+    "B4": {
+     "sample_B4": 60.0
+    },
+    "C4": {
+     "sample_C4": 60.0
+    },
+    "D4": {
+     "sample_D4": 60.0
+    },
+    "E4": {
+     "sample_E4": 60.0
+    },
+    "F4": {
+     "sample_F4": 60.0
+    },
+    "G4": {
+     "sample_G4": 60.0
+    },
+    "H4": {
+     "sample_H4": 60.0
+    },
+    "A5": {
+     "sample_A5": 60.0
+    },
+    "B5": {
+     "sample_B5": 60.0
+    },
+    "C5": {
+     "sample_C5": 60.0
+    },
+    "D5": {
+     "sample_D5": 60.0
+    },
+    "E5": {
+     "sample_E5": 60.0
+    },
+    "F5": {
+     "sample_F5": 60.0
+    },
+    "G5": {
+     "sample_G5": 60.0
+    },
+    "H5": {
+     "sample_H5": 60.0
+    },
+    "A6": {
+     "sample_A6": 60.0
+    },
+    "B6": {
+     "sample_B6": 60.0
+    },
+    "C6": {
+     "sample_C6": 60.0
+    },
+    "D6": {
+     "sample_D6": 60.0
+    },
+    "E6": {
+     "sample_E6": 60.0
+    },
+    "F6": {
+     "sample_F6": 60.0
+    },
+    "G6": {
+     "sample_G6": 60.0
+    },
+    "H6": {
+     "sample_H6": 60.0
+    },
+    "A7": {
+     "sample_A7": 60.0
+    },
+    "B7": {
+     "sample_B7": 60.0
+    },
+    "C7": {
+     "sample_C7": 60.0
+    },
+    "D7": {
+     "sample_D7": 60.0
+    },
+    "E7": {
+     "sample_E7": 60.0
+    },
+    "F7": {
+     "sample_F7": 60.0
+    },
+    "G7": {
+     "sample_G7": 60.0
+    },
+    "H7": {
+     "sample_H7": 60.0
+    },
+    "A8": {
+     "sample_A8": 60.0
+    },
+    "B8": {
+     "sample_B8": 60.0
+    },
+    "C8": {
+     "sample_C8": 60.0
+    },
+    "D8": {
+     "sample_D8": 60.0
+    },
+    "E8": {
+     "sample_E8": 60.0
+    },
+    "F8": {
+     "sample_F8": 60.0
+    },
+    "G8": {
+     "sample_G8": 60.0
+    },
+    "H8": {
+     "sample_H8": 60.0
+    },
+    "A9": {
+     "sample_A9": 60.0
+    },
+    "B9": {
+     "sample_B9": 60.0
+    },
+    "C9": {
+     "sample_C9": 60.0
+    },
+    "D9": {
+     "sample_D9": 60.0
+    },
+    "E9": {
+     "sample_E9": 60.0
+    },
+    "F9": {
+     "sample_F9": 60.0
+    },
+    "G9": {
+     "sample_G9": 60.0
+    },
+    "H9": {
+     "sample_H9": 60.0
+    },
+    "A10": {
+     "sample_A10": 60.0
+    },
+    "B10": {
+     "sample_B10": 60.0
+    },
+    "C10": {
+     "sample_C10": 60.0
+    },
+    "D10": {
+     "sample_D10": 60.0
+    },
+    "E10": {
+     "sample_E10": 60.0
+    },
+    "F10": {
+     "sample_F10": 60.0
+    },
+    "G10": {
+     "sample_G10": 60.0
+    },
+    "H10": {
+     "sample_H10": 60.0
+    },
+    "A11": {
+     "sample_A11": 60.0
+    },
+    "B11": {
+     "sample_B11": 60.0
+    },
+    "C11": {
+     "sample_C11": 60.0
+    },
+    "D11": {
+     "sample_D11": 60.0
+    },
+    "E11": {
+     "sample_E11": 60.0
+    },
+    "F11": {
+     "sample_F11": 60.0
+    },
+    "G11": {
+     "sample_G11": 60.0
+    },
+    "H11": {
+     "sample_H11": 60.0
+    },
+    "A12": {
+     "sample_A12": 60.0
+    },
+    "B12": {
+     "sample_B12": 60.0
+    },
+    "C12": {
+     "sample_C12": 60.0
+    },
+    "D12": {
+     "sample_D12": 60.0
+    },
+    "E12": {
+     "sample_E12": 60.0
+    },
+    "F12": {
+     "sample_F12": 60.0
+    },
+    "G12": {
+     "sample_G12": 60.0
+    },
+    "H12": {
+     "sample_H12": 60.0
+    }
+   },
+   "note": "60 uL of a different sample in every well"
+  }
+ }
+}

@@ -1,0 +1,72 @@
+# run log, simulated liquid handler, 8-channel head
+# plan: plan.json (60 steps)
+# reservoir reagent: 6.3 mL at start
+
+00:00:09 step  1 INFO  pick_up_tips tips col 1 channels 1-8: done
+00:00:15 step  2 INFO  aspirate reagent channels 1-8 40.0 uL: done
+00:00:20 step  3 INFO  dispense assay col 1 channels 1-8 40.0 uL: done
+00:00:31 step  4 INFO  mix assay col 1 channels 1-8 50.0 uL x3: done
+00:00:38 step  5 INFO  drop_tips trash channels 1-8: done
+00:00:47 step  6 WARN  pick_up_tips tips col 2: channel 6: tip not seated on first attempt; retry 1 of 2 succeeded
+00:00:47 step  6 INFO  pick_up_tips tips col 2 channels 1-8: done
+00:00:53 step  7 INFO  aspirate reagent channels 1-8 40.0 uL: done
+00:00:58 step  8 INFO  dispense assay col 2 channels 1-8 40.0 uL: done
+00:01:09 step  9 INFO  mix assay col 2 channels 1-8 50.0 uL x3: done
+00:01:16 step 10 INFO  drop_tips trash channels 1-8: done
+00:01:25 step 11 INFO  pick_up_tips tips col 3 channels 1-8: done
+00:01:31 step 12 INFO  aspirate reagent channels 1-8 40.0 uL: done
+00:01:36 step 13 INFO  dispense assay col 3 channels 1-8 40.0 uL: done
+00:01:47 step 14 INFO  mix assay col 3 channels 1-8 50.0 uL x3: done
+00:01:54 step 15 INFO  drop_tips trash channels 1-8: done
+00:02:03 step 16 ERROR pick_up_tips tips col 4: channel 3: no tip detected after 2 retries; recovery: continue without channel 3
+00:02:03 step 16 INFO  pick_up_tips tips col 4 channels 1,2,4-8: done
+00:02:09 step 17 INFO  aspirate reagent channels 1,2,4-8 40.0 uL: done
+00:02:14 step 18 INFO  dispense assay col 4 channels 1,2,4-8 40.0 uL: done
+00:02:25 step 19 INFO  mix assay col 4 channels 1,2,4-8 50.0 uL x3: done
+00:02:32 step 20 INFO  drop_tips trash channels 1,2,4-8: done
+00:02:41 step 21 INFO  pick_up_tips tips col 5 channels 1-8: done
+00:02:47 step 22 INFO  aspirate reagent channels 1-8 40.0 uL: done
+00:02:52 step 23 INFO  dispense assay col 5 channels 1-8 40.0 uL: done
+00:03:03 step 24 INFO  mix assay col 5 channels 1-8 50.0 uL x3: done
+00:03:10 step 25 INFO  drop_tips trash channels 1-8: done
+00:03:19 step 26 INFO  pick_up_tips tips col 6 channels 1-8: done
+00:03:25 step 27 INFO  aspirate reagent channels 1-8 40.0 uL: done
+00:03:30 step 28 INFO  dispense assay col 6 channels 1-8 40.0 uL: done
+00:03:41 step 29 INFO  mix assay col 6 channels 1-8 50.0 uL x3: done
+00:03:48 step 30 INFO  drop_tips trash channels 1-8: done
+00:03:57 step 31 INFO  pick_up_tips tips col 7 channels 1-8: done
+00:04:03 step 32 INFO  aspirate reagent channels 1-8 40.0 uL: done
+00:04:08 step 33 ERROR dispense assay col 7: channel 5: clot detected, dispense stopped before completion; recovery: tip discarded, channel 5 skipped for this column
+00:04:08 step 33 INFO  dispense assay col 7 channels 1-4,6-8 40.0 uL: done
+00:04:19 step 34 INFO  mix assay col 7 channels 1-4,6-8 50.0 uL x3: done
+00:04:26 step 35 INFO  drop_tips trash channels 1-4,6-8: done
+00:04:35 step 36 INFO  pick_up_tips tips col 8 channels 1-8: done
+00:04:41 step 37 INFO  aspirate reagent channels 1-8 40.0 uL: done
+00:04:46 step 38 INFO  dispense assay col 8 channels 1-8 40.0 uL: done
+00:04:57 step 39 INFO  mix assay col 8 channels 1-8 50.0 uL x3: done
+00:05:04 step 40 INFO  drop_tips trash channels 1-8: done
+00:05:13 step 41 INFO  pick_up_tips tips col 9 channels 1-8: done
+00:05:19 step 42 ERROR aspirate reagent: channel 8: pressure fault during aspiration (air bubble suspected); aspirated volume estimated at 26.3 of 40.0 uL; recovery: continue
+00:05:19 step 42 INFO  aspirate reagent channels 1-7 40.0 uL; channel 8 26.3 uL: done
+00:05:24 step 43 INFO  dispense assay col 9 channels 1-7 40.0 uL; channel 8 26.3 uL: done
+00:05:35 step 44 INFO  mix assay col 9 channels 1-8 50.0 uL x3: done
+00:05:42 step 45 INFO  drop_tips trash channels 1-8: done
+00:05:51 step 46 INFO  pick_up_tips tips col 10 channels 1-8: done
+00:05:57 step 47 INFO  aspirate reagent channels 1-8 40.0 uL: done
+00:06:02 step 48 INFO  dispense assay col 10 channels 1-8 40.0 uL: done
+00:06:13 step 49 INFO  mix assay col 10 channels 1-8 50.0 uL x3: done
+00:06:20 step 50 WARN  drop_tips trash: channel 2: tip released early, above the trash chute; recovery: continue
+00:06:20 step 50 INFO  drop_tips trash channels 1-8: done
+00:06:29 step 51 INFO  pick_up_tips tips col 11 channels 1-8: done
+00:06:35 step 52 WARN  aspirate reagent: reservoir reagent: liquid level low, about 3.15 mL before this aspiration
+00:06:35 step 52 INFO  aspirate reagent channels 1-8 40.0 uL: done
+00:06:40 step 53 INFO  dispense assay col 11 channels 1-8 40.0 uL: done
+00:06:51 step 54 INFO  mix assay col 11 channels 1-8 50.0 uL x3: done
+00:06:58 step 55 INFO  drop_tips trash channels 1-8: done
+00:07:07 step 56 INFO  pick_up_tips tips col 12 channels 1-8: done
+00:07:13 step 57 WARN  aspirate reagent: channel 1: air detected at the end of aspiration; recovery: dispensed back and aspirated again, 40.0 uL
+00:07:13 step 57 INFO  aspirate reagent channels 1-8 40.0 uL: done
+00:07:18 step 58 INFO  dispense assay col 12 channels 1-8 40.0 uL: done
+00:07:29 step 59 INFO  mix assay col 12 channels 1-8 50.0 uL x3: done
+00:07:36 step 60 INFO  drop_tips trash channels 1-8: done
+00:07:40 run finished with 3 errors and 4 warnings

@@ -1,0 +1,103 @@
+{
+ "labware": {
+  "tips": {
+   "type": "tiprack96",
+   "tips": "full rack, 96 tips of 300 uL"
+  },
+  "samples": {
+   "type": "plate96",
+   "contents_ul": {
+    "A1": {
+     "sample_A1": 30.0
+    },
+    "B1": {
+     "sample_B1": 30.0
+    },
+    "C1": {
+     "sample_C1": 30.0
+    },
+    "D1": {
+     "sample_D1": 30.0
+    },
+    "E1": {
+     "sample_E1": 30.0
+    },
+    "F1": {
+     "sample_F1": 30.0
+    },
+    "G1": {
+     "sample_G1": 30.0
+    },
+    "H1": {
+     "sample_H1": 30.0
+    },
+    "A2": {
+     "sample_A2": 30.0
+    },
+    "B2": {
+     "sample_B2": 30.0
+    },
+    "C2": {
+     "sample_C2": 30.0
+    },
+    "D2": {
+     "sample_D2": 30.0
+    },
+    "E2": {
+     "sample_E2": 30.0
+    },
+    "F2": {
+     "sample_F2": 30.0
+    },
+    "G2": {
+     "sample_G2": 30.0
+    },
+    "H2": {
+     "sample_H2": 30.0
+    },
+    "A3": {
+     "sample_A3": 30.0
+    },
+    "B3": {
+     "sample_B3": 30.0
+    },
+    "C3": {
+     "sample_C3": 30.0
+    },
+    "D3": {
+     "sample_D3": 30.0
+    },
+    "E3": {
+     "sample_E3": 30.0
+    },
+    "F3": {
+     "sample_F3": 30.0
+    },
+    "G3": {
+     "sample_G3": 30.0
+    },
+    "H3": {
+     "sample_H3": 30.0
+    }
+   },
+   "note": "genomic DNA, 30 uL per well; concentrations in concentrations.csv"
+  },
+  "te": {
+   "type": "reservoir",
+   "contents_ul": {
+    "A1": {
+     "te": 30000.0
+    }
+   },
+   "note": "low-TE buffer"
+  },
+  "intermediate": {
+   "type": "plate96",
+   "note": "empty plate, free to use"
+  },
+  "normalized": {
+   "type": "plate96",
+   "note": "empty destination plate"
+  }
+ }
+}

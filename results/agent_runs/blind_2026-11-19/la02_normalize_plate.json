@@ -1,0 +1,614 @@
+{
+ "task": "la02_normalize_plate",
+ "model": "Claude Opus 5.5",
+ "harness": "Claude Code workflow subagent with a shell and Python (standard library); no simulator provided",
+ "date": "2026-11-19",
+ "runs": 1,
+ "blinding": "Told to read and write only inside its task folder and not to use the internet; this was not enforced. The agent could see the task prompt and workspace files only, plus the operator's memory index, which holds no task answers.",
+ "task_files_sha256": {
+  "TASK.md": "d0251912473dda873ce6acd9f9897753607dff723b54d372bb56f60f71545d21",
+  "concentrations.csv": "0d90b9de26b29d019dc9f8cc52460817d904359d2f23a3b06894153a1dccbd75",
+  "deck.json": "a96c373a593b2d5f81c93c4fe689ef5da5f76910929e27a468fee843946934f1",
+  "environment.md": "9cacaf9a38e76b36955a874dc9b211bc18c18c0aa18899811905c7660b6197d4"
+ },
+ "answer": {
+  "plan": [
+   {
+    "op": "pick_up_tips",
+    "rack": "tips",
+    "column": 1
+   },
+   {
+    "op": "aspirate",
+    "labware": "te",
+    "volume_ul": [
+     47.833,
+     41.011,
+     50.387,
+     44.308,
+     46.331,
+     49.826,
+     42.512
+    ],
+    "channels": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     7,
+     8
+    ]
+   },
+   {
+    "op": "dispense",
+    "labware": "normalized",
+    "column": 1,
+    "volume_ul": [
+     45.833,
+     39.011,
+     48.387,
+     42.308,
+     44.331,
+     47.826,
+     40.512
+    ],
+    "channels": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     7,
+     8
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "te",
+    "volume_ul": [
+     42,
+     33.685,
+     46.444,
+     48.921,
+     45.333,
+     27.962,
+     50.78
+    ],
+    "channels": [
+     1,
+     2,
+     3,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "op": "dispense",
+    "labware": "normalized",
+    "column": 2,
+    "volume_ul": [
+     40,
+     31.685,
+     44.444,
+     46.921,
+     43.333,
+     25.962,
+     48.78
+    ],
+    "channels": [
+     1,
+     2,
+     3,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "te",
+    "volume_ul": [
+     36.892,
+     47.833,
+     46.929,
+     50.081,
+     43.922,
+     48.429,
+     29.679
+    ],
+    "channels": [
+     1,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "op": "dispense",
+    "labware": "normalized",
+    "column": 3,
+    "volume_ul": [
+     34.892,
+     45.833,
+     44.929,
+     48.081,
+     41.922,
+     46.429,
+     27.679
+    ],
+    "channels": [
+     1,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "te",
+    "volume_ul": [
+     47,
+     92,
+     47
+    ],
+    "channels": [
+     1,
+     3,
+     4
+    ]
+   },
+   {
+    "op": "dispense",
+    "labware": "intermediate",
+    "column": 1,
+    "volume_ul": 45,
+    "channels": [
+     4
+    ]
+   },
+   {
+    "op": "dispense",
+    "labware": "intermediate",
+    "column": 2,
+    "volume_ul": 45,
+    "channels": [
+     1,
+     3
+    ]
+   },
+   {
+    "op": "dispense",
+    "labware": "intermediate",
+    "column": 3,
+    "volume_ul": 45,
+    "channels": [
+     3
+    ]
+   },
+   {
+    "op": "drop_tips"
+   },
+   {
+    "op": "pick_up_tips",
+    "rack": "tips",
+    "column": 2,
+    "channels": [
+     4
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "samples",
+    "column": 1,
+    "volume_ul": 5,
+    "channels": [
+     4
+    ]
+   },
+   {
+    "op": "dispense",
+    "labware": "intermediate",
+    "column": 1,
+    "volume_ul": 5,
+    "channels": [
+     4
+    ]
+   },
+   {
+    "op": "mix",
+    "labware": "intermediate",
+    "column": 1,
+    "volume_ul": 40,
+    "cycles": 5,
+    "channels": [
+     4
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "intermediate",
+    "column": 1,
+    "volume_ul": 9.692,
+    "channels": [
+     4
+    ]
+   },
+   {
+    "op": "dispense",
+    "labware": "normalized",
+    "column": 1,
+    "volume_ul": 7.692,
+    "channels": [
+     4
+    ]
+   },
+   {
+    "op": "drop_tips"
+   },
+   {
+    "op": "pick_up_tips",
+    "rack": "tips",
+    "column": 2,
+    "channels": [
+     1,
+     3
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "samples",
+    "column": 2,
+    "volume_ul": 5,
+    "channels": [
+     1,
+     3
+    ]
+   },
+   {
+    "op": "dispense",
+    "labware": "intermediate",
+    "column": 2,
+    "volume_ul": 5,
+    "channels": [
+     1,
+     3
+    ]
+   },
+   {
+    "op": "mix",
+    "labware": "intermediate",
+    "column": 2,
+    "volume_ul": 40,
+    "cycles": 5,
+    "channels": [
+     1,
+     3
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "intermediate",
+    "column": 2,
+    "volume_ul": [
+     12,
+     7.556
+    ],
+    "channels": [
+     1,
+     3
+    ]
+   },
+   {
+    "op": "dispense",
+    "labware": "normalized",
+    "column": 2,
+    "volume_ul": [
+     10,
+     5.556
+    ],
+    "channels": [
+     1,
+     3
+    ]
+   },
+   {
+    "op": "drop_tips"
+   },
+   {
+    "op": "pick_up_tips",
+    "rack": "tips",
+    "column": 3,
+    "channels": [
+     3
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "samples",
+    "column": 3,
+    "volume_ul": 5,
+    "channels": [
+     3
+    ]
+   },
+   {
+    "op": "dispense",
+    "labware": "intermediate",
+    "column": 3,
+    "volume_ul": 5,
+    "channels": [
+     3
+    ]
+   },
+   {
+    "op": "mix",
+    "labware": "intermediate",
+    "column": 3,
+    "volume_ul": 40,
+    "cycles": 5,
+    "channels": [
+     3
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "intermediate",
+    "column": 3,
+    "volume_ul": 6.167,
+    "channels": [
+     3
+    ]
+   },
+   {
+    "op": "dispense",
+    "labware": "normalized",
+    "column": 3,
+    "volume_ul": 4.167,
+    "channels": [
+     3
+    ]
+   },
+   {
+    "op": "drop_tips"
+   },
+   {
+    "op": "pick_up_tips",
+    "rack": "tips",
+    "column": 4,
+    "channels": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     7,
+     8
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "samples",
+    "column": 1,
+    "volume_ul": [
+     4.167,
+     10.989,
+     1.613,
+     5.669,
+     2.174,
+     9.488
+    ],
+    "channels": [
+     1,
+     2,
+     3,
+     5,
+     7,
+     8
+    ]
+   },
+   {
+    "op": "dispense",
+    "labware": "normalized",
+    "column": 1,
+    "volume_ul": [
+     4.167,
+     10.989,
+     1.613,
+     5.669,
+     2.174,
+     9.488
+    ],
+    "channels": [
+     1,
+     2,
+     3,
+     5,
+     7,
+     8
+    ]
+   },
+   {
+    "op": "mix",
+    "labware": "normalized",
+    "column": 1,
+    "volume_ul": 40,
+    "cycles": 5,
+    "channels": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     7,
+     8
+    ]
+   },
+   {
+    "op": "drop_tips"
+   },
+   {
+    "op": "pick_up_tips",
+    "rack": "tips",
+    "column": 5,
+    "channels": [
+     1,
+     2,
+     3,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "samples",
+    "column": 2,
+    "volume_ul": [
+     18.315,
+     3.079,
+     6.667,
+     24.038,
+     1.22
+    ],
+    "channels": [
+     2,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "op": "dispense",
+    "labware": "normalized",
+    "column": 2,
+    "volume_ul": [
+     18.315,
+     3.079,
+     6.667,
+     24.038,
+     1.22
+    ],
+    "channels": [
+     2,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "op": "mix",
+    "labware": "normalized",
+    "column": 2,
+    "volume_ul": 40,
+    "cycles": 5,
+    "channels": [
+     1,
+     2,
+     3,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "op": "drop_tips"
+   },
+   {
+    "op": "pick_up_tips",
+    "rack": "tips",
+    "column": 6,
+    "channels": [
+     1,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "samples",
+    "column": 3,
+    "volume_ul": [
+     15.108,
+     5.071,
+     1.919,
+     8.078,
+     3.571,
+     22.321
+    ],
+    "channels": [
+     1,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "op": "dispense",
+    "labware": "normalized",
+    "column": 3,
+    "volume_ul": [
+     15.108,
+     5.071,
+     1.919,
+     8.078,
+     3.571,
+     22.321
+    ],
+    "channels": [
+     1,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "op": "mix",
+    "labware": "normalized",
+    "column": 3,
+    "volume_ul": 40,
+    "cycles": 5,
+    "channels": [
+     1,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "op": "drop_tips"
+   }
+  ],
+  "failed_samples": [
+   "F1",
+   "D2",
+   "B3"
+  ]
+ },
+ "approach": "Each well needs 500 ng, so sample volume = 500/C. Only 25 of the 30 uL can be drawn (5 uL dead volume), so F1, D2 and B3 fail. D1, C2 and C3 would need under 1 uL. They and A2 (exactly 1 uL) are pre-diluted 1:10 in intermediate and mixed. TE goes first into empty wells, which is contact-free, so one tip set serves all TE. Each sample then gets a fresh tip, and every destination well is mixed (40 uL, 5 cycles). TE and diluted aspirations take 2 uL extra, discarded with the tip. I wrote a rule simulator with exact and float arithmetic and checked that it catches planted mistakes. Result: no violations, 21 wells at 50 uL and 9.998-10.004 ng/uL, no carryover, 33 tips.",
+ "doubts": "A2 needs exactly 1.0 uL, the hardware minimum, which the rules allow; I pre-diluted it. No tolerance is given for final concentration or volume, nor for the grader's rounding when emptying tips, hence the 2 uL excess. Fractional volumes such as 1.613 uL are assumed allowed. Unstated: whether liquid in a tip picks up the tip's traces (I assumed it does), and whether idle channels may hold liquid. B3 fails only because of the dead volume, which \"30 uL each\" hides. failed_samples order is unspecified; I used plate order."
+}

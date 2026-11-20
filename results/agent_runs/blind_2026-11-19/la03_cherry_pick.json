@@ -1,0 +1,323 @@
+{
+ "task": "la03_cherry_pick",
+ "model": "Claude Opus 5.5",
+ "harness": "Claude Code workflow subagent with a shell and Python (standard library); no simulator provided",
+ "date": "2026-11-19",
+ "runs": 1,
+ "blinding": "Told to read and write only inside its task folder and not to use the internet; this was not enforced. The agent could see the task prompt and workspace files only, plus the operator's memory index, which holds no task answers.",
+ "task_files_sha256": {
+  "TASK.md": "4307da1a665491711241126453eb31b9017ff3abc19624137cdb82f5775a9595",
+  "deck.json": "945b50aefe0f86ae0f864605d8f4a610a980b3976fad6bc92d789cc0167e1907",
+  "environment.md": "9cacaf9a38e76b36955a874dc9b211bc18c18c0aa18899811905c7660b6197d4",
+  "plate_layout.md": "db3815f81640783bb4b9ae70702333773bf233b16b5b9321384c35c30c3ce691",
+  "screen_results.csv": "6c7415840d93decb67be9916a479195aebd5054f8d8edd7c2085da6e4bea965c"
+ },
+ "answer": {
+  "hits": [
+   {
+    "source_plate": "P1",
+    "source_well": "B3",
+    "dest_well": "A1"
+   },
+   {
+    "source_plate": "P1",
+    "source_well": "E5",
+    "dest_well": "B1"
+   },
+   {
+    "source_plate": "P1",
+    "source_well": "H5",
+    "dest_well": "C1"
+   },
+   {
+    "source_plate": "P1",
+    "source_well": "A8",
+    "dest_well": "D1"
+   },
+   {
+    "source_plate": "P1",
+    "source_well": "D9",
+    "dest_well": "E1"
+   },
+   {
+    "source_plate": "P1",
+    "source_well": "G10",
+    "dest_well": "F1"
+   },
+   {
+    "source_plate": "P1",
+    "source_well": "C11",
+    "dest_well": "G1"
+   },
+   {
+    "source_plate": "P2",
+    "source_well": "A2",
+    "dest_well": "H1"
+   },
+   {
+    "source_plate": "P2",
+    "source_well": "F4",
+    "dest_well": "A2"
+   },
+   {
+    "source_plate": "P2",
+    "source_well": "C6",
+    "dest_well": "B2"
+   },
+   {
+    "source_plate": "P2",
+    "source_well": "H7",
+    "dest_well": "C2"
+   },
+   {
+    "source_plate": "P2",
+    "source_well": "B9",
+    "dest_well": "D2"
+   },
+   {
+    "source_plate": "P2",
+    "source_well": "E9",
+    "dest_well": "E2"
+   },
+   {
+    "source_plate": "P2",
+    "source_well": "D11",
+    "dest_well": "F2"
+   }
+  ],
+  "plan": [
+   {
+    "op": "pick_up_tips",
+    "rack": "tips",
+    "column": 1,
+    "channels": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "P1",
+    "column": 3,
+    "volume_ul": 10,
+    "channels": [
+     1
+    ],
+    "rows": [
+     "B"
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "P1",
+    "column": 5,
+    "volume_ul": 10,
+    "channels": [
+     2,
+     3
+    ],
+    "rows": [
+     "E",
+     "H"
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "P1",
+    "column": 8,
+    "volume_ul": 10,
+    "channels": [
+     4
+    ],
+    "rows": [
+     "A"
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "P1",
+    "column": 9,
+    "volume_ul": 10,
+    "channels": [
+     5
+    ],
+    "rows": [
+     "D"
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "P1",
+    "column": 10,
+    "volume_ul": 10,
+    "channels": [
+     6
+    ],
+    "rows": [
+     "G"
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "P1",
+    "column": 11,
+    "volume_ul": 10,
+    "channels": [
+     7
+    ],
+    "rows": [
+     "C"
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "P2",
+    "column": 2,
+    "volume_ul": 10,
+    "channels": [
+     8
+    ],
+    "rows": [
+     "A"
+    ]
+   },
+   {
+    "op": "dispense",
+    "labware": "hits",
+    "column": 1,
+    "volume_ul": 10,
+    "channels": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "rows": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H"
+    ]
+   },
+   {
+    "op": "drop_tips"
+   },
+   {
+    "op": "pick_up_tips",
+    "rack": "tips",
+    "column": 2,
+    "channels": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "P2",
+    "column": 4,
+    "volume_ul": 10,
+    "channels": [
+     1
+    ],
+    "rows": [
+     "F"
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "P2",
+    "column": 6,
+    "volume_ul": 10,
+    "channels": [
+     2
+    ],
+    "rows": [
+     "C"
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "P2",
+    "column": 7,
+    "volume_ul": 10,
+    "channels": [
+     3
+    ],
+    "rows": [
+     "H"
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "P2",
+    "column": 9,
+    "volume_ul": 10,
+    "channels": [
+     4,
+     5
+    ],
+    "rows": [
+     "B",
+     "E"
+    ]
+   },
+   {
+    "op": "aspirate",
+    "labware": "P2",
+    "column": 11,
+    "volume_ul": 10,
+    "channels": [
+     6
+    ],
+    "rows": [
+     "D"
+    ]
+   },
+   {
+    "op": "dispense",
+    "labware": "hits",
+    "column": 2,
+    "volume_ul": 10,
+    "channels": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "rows": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F"
+    ]
+   },
+   {
+    "op": "drop_tips"
+   }
+  ]
+ },
+ "approach": "A script scored screen_results.csv. Hits are test-compound wells only (columns 2-11, per plate_layout.md) with at least 50% inhibition in both replicates: 14 hits, 7 per plate. Z' was 0.83 to 0.86 on all 4 plate-replicates. Hits pack in CSV order (P1, then P2, each in source column order) into hits A1 to F2. Plan, per destination column: pick up a fresh tip column (one tip per compound), aspirate 10 uL grouped by source column with rows strictly increasing, one dispense into empty wells (no contact), drop tips. That is 18 steps and 14 tips. I wrote a strict checker for environment.md and confirmed it catches planted rule breaks. The plan runs clean, with no contamination, and sources keep 30 uL.",
+ "doubts": "The task does not say what order hits pack in; I used P1 then P2, each in source column order. P1 D9 rep1 and P2 H7 rep2 are exactly 50.0; I counted both ('at least 50%'). P1 A6 (49.9) is out. The 16 reference-inhibitor wells pass the cutoff but are controls, so I left them out. The rules don't say if an unmixed single-layer well counts as homogeneous; I added no mix. The rules let one channel reach any row (channel 8 at row A) with uneven spacing, which a fixed-pitch head cannot. A 56-step one-channel plan gives the same plate."
+}
